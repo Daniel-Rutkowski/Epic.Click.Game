@@ -12,10 +12,10 @@ using Android.Widget;
 
 namespace Epic_Click_Game
 {
-    [Activity(Label = "Login", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Epic Click Game", MainLauncher = true, Icon = "@drawable/icon")]
     public class Login : Activity
     {
-        public static string playerName { get; set; }
+        public static string PlayerName { get; set; }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -26,8 +26,8 @@ namespace Epic_Click_Game
 
             startButton.Click += delegate 
             {
-                playerName = name.Text;
-                if( playerName == "admin")
+                PlayerName = name.Text;
+                if(PlayerName == "admin")
                 {
                     StartActivity(typeof(Admin));
                 }else

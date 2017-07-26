@@ -97,7 +97,7 @@ namespace Epic_Click_Game
         protected override void OnStop()
         {
             //base.OnStop();
-            AddNewUser(Login.playerName, count);
+            AddNewUser(Login.PlayerName, count);
         }
 
     }
