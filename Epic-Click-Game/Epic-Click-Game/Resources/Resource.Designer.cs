@@ -47,6 +47,9 @@ namespace Epic_Click_Game
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int MainGameBackground = 2130837505;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -61,10 +64,16 @@ namespace Epic_Click_Game
 		{
 			
 			// aapt resource value: 0x7f050008
-			public const int ThisTextView1 = 2131034120;
+			public const int HighScores = 2131034120;
+			
+			// aapt resource value: 0x7f050009
+			public const int ThisTextView1 = 2131034121;
 			
 			// aapt resource value: 0x7f050007
 			public const int button1 = 2131034119;
+			
+			// aapt resource value: 0x7f05000a
+			public const int button2 = 2131034122;
 			
 			// aapt resource value: 0x7f050003
 			public const int clearButton = 2131034115;

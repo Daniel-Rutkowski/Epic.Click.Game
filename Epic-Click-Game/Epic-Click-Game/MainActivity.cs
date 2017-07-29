@@ -16,7 +16,7 @@ namespace Epic_Click_Game
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             Button button = FindViewById<Button>(Resource.Id.button1);
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            button.Click += delegate { button.Text = string.Format("{0} clicks. Keep Going!", count++); };
             DisplayTopFiveUsers();
             
         }
@@ -96,8 +96,8 @@ namespace Epic_Click_Game
 
         protected override void OnStop()
         {
-            //base.OnStop();
             AddNewUser(Login.PlayerName, count);
+            base.OnStop();
         }
 
     }
