@@ -3,12 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:background="@drawable/adminbackGround">
     <TextView
         android:text="Current Database :"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="25dp"
         android:id="@+id/currentDatabaseTitle"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp" />
@@ -27,11 +27,11 @@
             android:id="@+id/currentDatabaseList" />
     </ScrollView>
     <Button
-        android:text="Button"
+        android:text="Clear Database"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:id="@+id/clearButton"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp" />
 </LinearLayout>

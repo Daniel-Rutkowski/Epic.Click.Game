@@ -3,10 +3,12 @@ using Android.Widget;
 using Android.OS;
 using SQLite;
 using System.IO;
+using Android.Content.PM;
+using Android.Views;
 
 namespace Epic_Click_Game
 {
-    [Activity(Label = "Epic_Click_Game")]
+    [Activity(Label = "Epic_Click_Game", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : Activity
     {
         private int count = 1;
@@ -14,9 +16,19 @@ namespace Epic_Click_Game
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            RequestWindowFeature(WindowFeatures.NoTitle);
             SetContentView(Resource.Layout.Main);
             Button button = FindViewById<Button>(Resource.Id.button1);
+            Button StopButton = FindViewById<Button>(Resource.Id.button2);
+
             button.Click += delegate { button.Text = string.Format("{0} clicks. Keep Going!", count++); };
+
+            StopButton.Click += delegate 
+            {
+                AddNewUser(Login.PlayerName, count);
+                StartActivity(typeof(Login));
+            };
+
             DisplayTopFiveUsers();
             
         }
@@ -94,11 +106,12 @@ namespace Epic_Click_Game
 
         }
 
+        /*
         protected override void OnStop()
         {
             AddNewUser(Login.PlayerName, count);
-            base.OnStop();
-        }
+            //base.OnStop();
+        }*/
 
     }
 }

@@ -12,15 +12,17 @@ using Android.Widget;
 using SQLite;
 using System.IO;
 using Android.Database;
+using Android.Content.PM;
 
 namespace Epic_Click_Game
 {
-    [Activity(Label = "Admin")]
+    [Activity(Label = "Admin", ScreenOrientation = ScreenOrientation.Portrait)]
     public class Admin : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            RequestWindowFeature(WindowFeatures.NoTitle);
             SetContentView(Resource.Layout.Admin);
 
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbTest.db3");
@@ -28,14 +30,15 @@ namespace Epic_Click_Game
             db.CreateTable<User>();
             TextView displayText = FindViewById<TextView>(Resource.Id.currentDatabaseList);
             var table = db.Table<User>();
-            if (db.GetTableInfo("table").Capacity < 1)
-            {
-                displayText.Text = "No Entries Available";
-            }
             foreach (var item in table)
             {
                 User myUser = new User(item.Name, item.Score);
                 displayText.Text += myUser + "\n";
+            }
+
+            if (table.Count() < 1)
+            {
+                displayText.Text = "No Entries Available";
             }
 
 
