@@ -48,7 +48,10 @@ namespace Epic_Click_Game
 			public const int Icon = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int MainGameBackground = 2130837505;
+			public const int loginHomePage = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int MainGameBackground = 2130837506;
 			
 			static Drawable()
 			{
@@ -63,17 +66,17 @@ namespace Epic_Click_Game
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050008
-			public const int HighScores = 2131034120;
-			
 			// aapt resource value: 0x7f050009
-			public const int ThisTextView1 = 2131034121;
-			
-			// aapt resource value: 0x7f050007
-			public const int button1 = 2131034119;
+			public const int HighScores = 2131034121;
 			
 			// aapt resource value: 0x7f05000a
-			public const int button2 = 2131034122;
+			public const int ThisTextView1 = 2131034122;
+			
+			// aapt resource value: 0x7f050008
+			public const int button1 = 2131034120;
+			
+			// aapt resource value: 0x7f05000b
+			public const int button2 = 2131034123;
 			
 			// aapt resource value: 0x7f050003
 			public const int clearButton = 2131034115;
@@ -84,17 +87,20 @@ namespace Epic_Click_Game
 			// aapt resource value: 0x7f050000
 			public const int currentDatabaseTitle = 2131034112;
 			
-			// aapt resource value: 0x7f050005
-			public const int nameEdit = 2131034117;
+			// aapt resource value: 0x7f050006
+			public const int nameEdit = 2131034118;
 			
-			// aapt resource value: 0x7f050004
-			public const int nameText = 2131034116;
+			// aapt resource value: 0x7f050005
+			public const int nameText = 2131034117;
 			
 			// aapt resource value: 0x7f050001
 			public const int scrollView1 = 2131034113;
 			
-			// aapt resource value: 0x7f050006
-			public const int startButton = 2131034118;
+			// aapt resource value: 0x7f050007
+			public const int startButton = 2131034119;
+			
+			// aapt resource value: 0x7f050004
+			public const int titleText = 2131034116;
 			
 			static Id()
 			{

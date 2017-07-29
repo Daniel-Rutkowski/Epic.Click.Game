@@ -3,15 +3,24 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:background="@drawable/loginHomePage">
+  <TextView
+        android:text="The Epic Click Game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#DF111D"
+        android:id="@+id/titleText"
+        android:gravity="center"
+        android:layout_marginTop="50dp" />
     <TextView
         android:text="Enter Your Name :"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="12dp"
         android:id="@+id/nameText"
         android:gravity="center"
-        android:layout_marginTop="80dp" />
+        android:layout_marginTop="30dp" />
     <EditText
         android:id="@+id/nameEdit"
         android:inputType="text"
@@ -22,13 +31,13 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginLeft="90dp" />
-    <Button
-        android:text="Begin Your Journey"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/startButton"
-        android:gravity="center"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+  <Button
+      android:text="Begin Your Journey"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:id="@+id/startButton"
+      android:layout_marginTop="40dp"
+      android:layout_marginLeft="40dp"
+      android:layout_marginRight="40dp"
+      android:layout_marginBottom="30dp" />
 </LinearLayout>
