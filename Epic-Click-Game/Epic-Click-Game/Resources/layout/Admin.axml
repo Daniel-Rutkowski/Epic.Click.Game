@@ -28,10 +28,11 @@
     </ScrollView>
     <Button
         android:text="Clear Database"
+        android:textColor="#f2f2f2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:id="@+id/clearButton"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"/>
 </LinearLayout>

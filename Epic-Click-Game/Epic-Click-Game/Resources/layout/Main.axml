@@ -6,47 +6,49 @@
     android:background="@drawable/MainGameBackground">
   <Button
       android:text="CLICK TO BEGIN"
+      android:textColor="#f2f2f2"
       android:layout_width="match_parent"
       android:layout_height="80dp"
       android:id="@+id/button1"
-      android:layout_marginTop="40dp"
+      android:layout_marginTop="70dp"
       android:layout_marginLeft="10dp"
       android:layout_marginRight="10dp"
-      android:layout_marginBottom="30dp" />
+      android:layout_marginBottom="15dp"/>
   <TextView
-        android:text="High Scores"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/HighScores"
-        android:textSize="40dp"
-        android:gravity="center_horizontal" />
+     android:text="High Scores"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/HighScores"
+     android:textSize="40dp"
+     android:gravity="center_horizontal" />
   <View
      android:layout_width="match_parent"
      android:layout_height="5dp"
      android:layout_marginTop="5dp"
      android:background="#737373" />
   <TextView
-        android:layout_marginTop="5dp"
-        android:text=""
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ThisTextView1"
-        android:textSize="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="center_horizontal" />
+     android:layout_marginTop="5dp"
+     android:text=""
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/ThisTextView1"
+     android:textSize="20dp"
+     android:layout_marginLeft="10dp"
+     android:layout_marginRight="10dp"
+     android:gravity="center_horizontal" />
   <View
-    android:layout_width="match_parent"
-    android:layout_marginBottom="20dp"
-    android:layout_height="5dp"
-    android:background="#737373" />
+     android:layout_width="match_parent"
+     android:layout_marginBottom="20dp"
+     android:layout_height="5dp"
+     android:background="#737373" />
   <Button
-        android:text="SAVE SCORE AND GIVE UP"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:id="@+id/button2"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="40dp" />
+    android:text="SAVE SCORE AND GIVE UP"
+    android:textColor="#f2f2f2"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/button2"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="40dp"/>
 </LinearLayout>

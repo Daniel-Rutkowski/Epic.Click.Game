@@ -85,8 +85,12 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\layout\Admin.axml" />
-    <AndroidResource Include="Resources\layout\Login.axml" />
+    <AndroidResource Include="Resources\layout\Admin.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Login.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -110,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\adminbackGround.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\AppIcon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

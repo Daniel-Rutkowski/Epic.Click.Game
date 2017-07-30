@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
 
 namespace Epic_Click_Game
 {
-    [Activity(Label = "Epic Click Game", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "Epic Click Game", MainLauncher = true, Icon = "@drawable/AppIcon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class Login : Activity
     {
         public static string PlayerName { get; set; }
@@ -26,6 +19,7 @@ namespace Epic_Click_Game
             EditText name = FindViewById<EditText>(Resource.Id.nameEdit);
             Button startButton = FindViewById<Button>(Resource.Id.startButton);
 
+            // Sends a User to Main Activity or Admin Page if they insert "admin"
             startButton.Click += delegate 
             {
                 PlayerName = name.Text;

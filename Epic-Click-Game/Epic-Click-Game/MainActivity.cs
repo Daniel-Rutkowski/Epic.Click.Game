@@ -21,8 +21,10 @@ namespace Epic_Click_Game
             Button button = FindViewById<Button>(Resource.Id.button1);
             Button StopButton = FindViewById<Button>(Resource.Id.button2);
 
+            // Main Click Button to Run the Game
             button.Click += delegate { button.Text = string.Format("{0} clicks. Keep Going!", count++); };
 
+            // Button Used to Save Score and Quit
             StopButton.Click += delegate 
             {
                 AddNewUser(Login.PlayerName, count);
@@ -33,6 +35,7 @@ namespace Epic_Click_Game
             
         }
 
+        // Adds Another User to the Database
         public void AddNewUser(string name, int score)
         {
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbTest.db3");
@@ -40,9 +43,9 @@ namespace Epic_Click_Game
             db.CreateTable<User>();
             User userTemp = new User(name, score);
             db.Insert(userTemp);
-            //db.DeleteAll<User>();
         }
 
+        // Runs the Logic for the High Scores List
         public void DisplayTopFiveUsers()
         {
             string dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "dbTest.db3");
@@ -105,14 +108,6 @@ namespace Epic_Click_Game
             displayText.Text += user5 + "\n\n";
 
         }
-
-        /*
-        protected override void OnStop()
-        {
-            AddNewUser(Login.PlayerName, count);
-            //base.OnStop();
-        }*/
-
     }
 }
 
