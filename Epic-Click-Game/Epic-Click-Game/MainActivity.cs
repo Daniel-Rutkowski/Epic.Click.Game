@@ -5,11 +5,15 @@ using SQLite;
 using System.IO;
 using Android.Content.PM;
 using Android.Views;
+using Com.Tapadoo.Alerter;
+using Android.Support.V4.App;
+using Android.Support.V7.App;
+
 
 namespace Epic_Click_Game
 {
-    [Activity(Label = "Epic_Click_Game", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class MainActivity : Activity
+    [Activity(Label = "Epic_Click_Game", ScreenOrientation = ScreenOrientation.Portrait, Theme = "@style/Theme.AppCompat.NoActionBar")]
+    public class MainActivity : AppCompatActivity
     {
         private int count = 1;
 
@@ -22,17 +26,38 @@ namespace Epic_Click_Game
             Button StopButton = FindViewById<Button>(Resource.Id.button2);
 
             // Main Click Button to Run the Game
-            button.Click += delegate { button.Text = string.Format("{0} clicks. Keep Going!", count++); };
+            button.Click += delegate 
+            {
+                button.Text = string.Format("{0} clicks. Keep Going!", count++);
+
+                if (count % 1000 == 1)
+                {
+                    // Alert to the User Every 1000 Clicks with the Number of Clicks They Have
+                    Alerter.Create(this).SetTitle("Great Work!!")
+                    .SetText((count - 1) + " clicks. Wow!")
+                    .SetBackgroundColor(Android.Resource.Color.HoloBlueDark)
+                    .Show();
+                }
+                else if (count % 250 == 1)
+                {
+                    // Alert to Encourage User Every 250 Clicks
+                    Alerter.Create(this).SetTitle("Keep Going!!")
+                    .SetText("I am the push notification that you have desired.")
+                    .SetBackgroundColor(Android.Resource.Color.HoloRedLight)
+                    .Show();
+                }
+
+            };
 
             // Button Used to Save Score and Quit
             StopButton.Click += delegate 
             {
                 AddNewUser(Login.PlayerName, count);
+                Toast.MakeText(this, "Well done! You got " + (count - 1) + " clicks.", ToastLength.Short).Show();
                 StartActivity(typeof(Login));
             };
 
             DisplayTopFiveUsers();
-            
         }
 
         // Adds Another User to the Database
